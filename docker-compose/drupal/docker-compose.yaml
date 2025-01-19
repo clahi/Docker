@@ -1,6 +1,9 @@
 services:
   drupal:
-    image: drupal:9
+    build:
+      context: .
+      dockerfile: drupal.Dockerfile 
+    image: custom-drupal
     ports:
       - 8080:80
   
